@@ -1,0 +1,13 @@
+<section class="container">
+    @for (book of books; track book.id) {
+        <article class="book-card">
+            <div class="book-card__cover">
+                <img [src]="book.coverUrl" [attr.alt]="'Portada del libro ' + book.title" />
+            </div>
+            <div class="book-card__info">
+                <h3 class="book-card__title">{{ book.title }}</h3>
+                <p class="book-card__author">{{ book.author }}</p>
+            </div>
+        </article>
+    }
+</section>
