@@ -88,6 +88,55 @@ $author-text: #64748b;
         margin: 0;
         line-height: 1.45;
     }
+
+    &__file-type__size,
+    &__pages {
+        margin: 0;
+        color: #475569;
+        font-size: 0.9rem;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 0.4rem;
+        flex-wrap: wrap;
+    }
+
+    &__button {
+        width: 2.3rem;
+        height: 2.3rem;
+        border: 1px solid #e2e8f0;
+        border-radius: 999px;
+        background: #ffffff;
+        color: #334155;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+
+        &:hover {
+            transform: translateY(-2px);
+            background: #f8fafc;
+        }
+
+        &--favorite {
+            color: #e11d48;
+        }
+
+        &--read {
+            color: #15803d;
+        }
+
+        &--read-later {
+            color: #d97706;
+        }
+
+        &--save {
+            color: #2563eb;
+        }
+    }
 }
 
 @media (max-width: 1200px) {
