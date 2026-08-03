@@ -11,8 +11,8 @@ $author-text: #64748b;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: $gap-size;
     width: 100%;
     max-width: 1400px;
@@ -26,10 +26,12 @@ $author-text: #64748b;
     border-radius: 18px;
     overflow: hidden;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: stretch;
     transition: transform 0.5s ease, box-shadow 0.25s ease;
+    flex: 1 1 auto;
+    max-width: auto;
     min-width: 0;
-    position: relative;
 
     &::after {
         content: "";
@@ -48,16 +50,17 @@ $author-text: #64748b;
 
     &__cover {
         position: relative;
-        width: 100%;
-        aspect-ratio: 2 / 3;
+        flex: 1 1 140px;
+        width: 140px;
+        max-width: 140px;
         padding: 1rem;
         box-sizing: border-box;
 
         img {
             position: absolute;
             inset: 0.75rem;
-            width: calc(100% - 1.5rem);
-            height: calc(100% - 1.5rem);
+            width: auto;
+            height: 100%;
             object-fit: cover;
             display: block;
             border-radius: 12px;
@@ -71,7 +74,8 @@ $author-text: #64748b;
         display: flex;
         flex-direction: column;
         gap: 0.35rem;
-        flex: 1;
+        flex: 1 1 auto;
+        min-width: 0;
     }
 
     &__title {
@@ -139,25 +143,33 @@ $author-text: #64748b;
 }
 
 @media (max-width: 1200px) {
-    .container {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+    .book-card {
+        flex: 1 1 calc(25% - #{$gap-size});
+        max-width: calc(25% - #{$gap-size});
     }
 }
 
 @media (max-width: 900px) {
-    .container {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+    .book-card {
+        flex: 1 1 calc(33.333% - #{$gap-size});
+        max-width: calc(33.333% - #{$gap-size});
+
+        &__cover {
+            max-width: fit-content;
+        }
     }
 }
 
 @media (max-width: 700px) {
-    .container {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    .book-card {
+        flex: 1 1 calc(50% - #{$gap-size});
+        max-width: calc(50% - #{$gap-size});
     }
 }
 
 @media (max-width: 480px) {
-    .container {
-        grid-template-columns: 1fr;
+    .book-card {
+        flex: 1 1 100%;
+        max-width: 100%;
     }
 }
