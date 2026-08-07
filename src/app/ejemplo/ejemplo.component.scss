@@ -1,164 +1,174 @@
 $bg-card: #ffffff;
-$shadow-placeholder: 0 16px 36px rgba(7, 10, 17, 0.096);
-$shadow-hover: 0 16px 36px rgba(7, 10, 17, 0.295);
-$gap-size: 2rem;
-$title-text: #08140d;
+$shadow-placeholder: 0 10px 25px rgba(7, 10, 17, 0.05);
+$shadow-hover: 0 16px 36px rgba(7, 10, 17, 0.12);
+$gap-size: 1.5rem;
+$title-text: #0f172a;
 $author-text: #64748b;
 
 .container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: $gap-size;
-    max-width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0.5rem 0 2rem;
+    padding: 2rem 1rem;
 }
 
 .book-card {
+    position: relative;
     display: flex;
+    flex-direction: row;
     align-items: stretch;
-    width: 100%;
-    max-width: 580px;
+    flex: 0 0 360px;
+    height: 220px;
+    max-width: 100%;
     background: linear-gradient(180deg, #ffffff 0%, #fff1e9 100%);
     box-shadow: $shadow-placeholder;
-    border-radius: 12px;
-    padding: 20px;
-    gap: 24px;
+    border-radius: 16px;
+    padding: 1.25rem;
+    gap: 1.25rem;
     box-sizing: border-box;
-    transition: transform 0.5s ease, box-shadow 0.25s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0,0,0, 0.04);
     
-    &::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        border-radius: inherit;
-        pointer-events: none;
-        box-shadow: inset 0 1px 0 rgba(235, 233, 233, 0.8);
-    }
-
     &:hover {
-        transform: translateY(-6px) scale(1.01);
+        transform: translateY(-4px) scale(1.01);
         box-shadow: $shadow-hover;
         cursor: pointer;
     }
 
     &__cover {
-        flex-shrink: 0;
-        display: flex;
-        align-items: center;
+        flex: 0 0 110px;
 
         img {
             width: 100%;
-            height: auto;
-            max-height: 180px;
+            height: 100%;
             object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(15, 23, 42, 0.1);
             display: block;
-            border-radius: 12px;
-            border: 1px solid rgba(148, 163, 184, 0.25);
-            box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
         }
     }
 
     &__info {
-        flex-grow: 1;
+        flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 150px;
-        padding: 1rem 1.1rem 1.2rem;
-        gap: 0.35rem;
+        min-width: 0;
     }
 
     &__title {
-        margin: 0 0 4px 0;
-        font-size: 1.25rem;
+        margin: 0 0 0.35rem 0;
+        font-size: 1.1rem;
         font-weight: 700;
         color: $title-text;
-        line-height: 1.35;
+        line-height: 1.3;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
     &__author {
-        margin: 0 0 auto 0;
+        margin: 0 0 0.5rem 0;
         font-size: 0.95rem;
         color: $author-text;
-        line-height: 1.45;
     }
 
     &__pages {
         margin: 0;
-        color: #475569;
-        font-size: 0.9rem;
+        color: #94a3b8;
+        font-size: 0.85rem;
     }
 
-    &__buttons {
+    &__actions {
         display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
         gap: 0.5rem;
-        margin-top: 0.4rem;
+        margin-top: 1rem;
     }
 
     &__button {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 6px;
-        padding: 8px 16px;
+        flex: 0 0 auto;
+        width: 36px;
+        height: 36px;
+        padding: 0;
         border: 1px solid #e2e8f0;
-        border-radius: 999px;
+        border-radius: 50%;
         background-color: #ffffff;
-        color: #334155;
         cursor: pointer;
-        transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+        transition: all 0.2s ease;
+
+        svg {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2.2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
 
         &:hover {
-            transform: translateY(-2px);
-            background: #f8fafc;
+            transform: scale(1.1);
         }
 
         &--favorite {
             color: #e11d48;
+            &:hover { background: #fff1f2; border-color: #fecdd3; }
         }
 
         &--read {
             color: #15803d;
+            &:hover { background: #f0fdf4; border-color: #bbf7d0; }
         }
 
         &--read-later {
             color: #d97706;
+            &:hover { background: #fffbeb; border-color: #fde68a; }
         }
 
         &--save {
             color: #2563eb;
+            &:hover { background: #eff6ff; border-color: #bfdbfe; }
         }
     }
 }
-
-@media (max-width: 1200px) {
-    .book-card {
-        flex: 1 1 calc(25% - #{$gap-size});
-        max-width: calc(25% - #{$gap-size});
-    }
-}
-
 @media (max-width: 900px) {
     .book-card {
-        flex: 1 1 calc(33.333% - #{$gap-size});
-        max-width: calc(33.333% - #{$gap-size});
+        flex: 1 1 calc(50% - #{$gap-size});
+        max-width: calc(50% - #{$gap-size});
+        min-width: 280px;
 
         &__cover {
-            max-width: fit-content;
+            flex: 0 0 100px;
         }
     }
 }
 
 @media (max-width: 700px) {
     .book-card {
-        flex: 1 1 calc(50% - #{$gap-size});
-        max-width: calc(50% - #{$gap-size});
+        flex: 1 1 calc(100% - #{$gap-size});
+        max-width: 100%;
+        min-width: 0;
     }
 }
 
 @media (max-width: 480px) {
     .book-card {
-        flex: 1 1 100%;
-        max-width: 100%;
+        flex: 0 0 100%;
+        height: 200px;
+        padding: 1rem;
+        gap: 1rem;
+
+        &__cover {
+            flex: 0 0 90px;
+        }
     }
 }
