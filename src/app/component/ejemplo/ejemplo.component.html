@@ -35,6 +35,13 @@
                         </button>
                     }
                 </div>
+                <div>
+                    <h2 *ngIf="mostrar_nombre">{{ nombre }}</h2>
+                    <button
+                        class="btn"
+                        (click)="mostrarNombre()"
+                    >Click</button>
+                </div>
             </div>
         </article>
     }

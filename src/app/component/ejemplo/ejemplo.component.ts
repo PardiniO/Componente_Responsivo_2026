@@ -22,6 +22,14 @@ export interface Book {
 })
 
 export class EjemploComponent {
+    nombre: string = "Daldsaddjsfnsdfe";
+
+    mostrar_nombre: boolean = false;
+
+    mostrarNombre() {
+        this.mostrar_nombre = !this.mostrar_nombre;
+    }
+
     bookActions: BookAction[] = [
         { type: 'favorite', label: 'Agregar a favoritos' },
         { type: 'read', label: 'Marcar como leído' },
@@ -46,7 +54,7 @@ export class EjemploComponent {
         },
         {
             id: 3,
-            title: 'Harry',
+            title: 'Harry Potter y la piedra filosofal',
             author: 'J.K.Rowling',
             coverUrl: 'https://i.pinimg.com/control1/1200x/ba/04/e6/ba04e627219222aa722c7c47f1262675.jpg',
             pages: 228

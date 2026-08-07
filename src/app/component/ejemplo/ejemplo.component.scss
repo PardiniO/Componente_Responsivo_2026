@@ -139,6 +139,13 @@ $author-text: #64748b;
             &:hover { background: #eff6ff; border-color: #bfdbfe; }
         }
     }
+
+    .btn {
+        background-color: #121413;
+        border: none;
+        color: #64748b;
+        
+    }
 }
 @media (max-width: 900px) {
     .book-card {
