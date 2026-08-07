@@ -22,7 +22,7 @@ export interface Book {
 })
 
 export class EjemploComponent {
-    readonly bookActions: BookAction[] = [
+    bookActions: BookAction[] = [
         { type: 'favorite', label: 'Agregar a favoritos' },
         { type: 'read', label: 'Marcar como leído' },
         { type: 'read-later', label: 'Leer más tarde' },
