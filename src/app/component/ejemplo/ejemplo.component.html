@@ -1,4 +1,17 @@
 <section class="container">
+    <div>
+        <h2 *ngIf="mostrar_nombre; else elseBlock">{{ nombre }}</h2>
+        <ng-template #elseBlock>
+            <h2>Oculto</h2>
+        </ng-template>
+
+        <button
+            class="btn"
+            (click)="mostrarNombre()"
+            >Click
+        </button>
+    </div>
+
     @for (book of books; track book.id) {
         <article class="book-card">
             <div class="book-card__cover">
@@ -34,13 +47,6 @@
                             }
                         </button>
                     }
-                </div>
-                <div>
-                    <h2 *ngIf="mostrar_nombre">{{ nombre }}</h2>
-                    <button
-                        class="btn"
-                        (click)="mostrarNombre()"
-                    >Click</button>
                 </div>
             </div>
         </article>

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 export type BookActionType = 'favorite' | 'read' | 'read-later' | 'save';
 
@@ -22,13 +22,13 @@ export interface Book {
 })
 
 export class EjemploComponent {
-    nombre: string = "Daldsaddjsfnsdfe";
+    nombre: string = "Libro";
 
     mostrar_nombre: boolean = false;
 
     mostrarNombre() {
         this.mostrar_nombre = !this.mostrar_nombre;
-    }
+    };
 
     bookActions: BookAction[] = [
         { type: 'favorite', label: 'Agregar a favoritos' },

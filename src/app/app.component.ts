@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  
+/*  frutas: string[] = [
+    'pera', 'manzana', 'anana', 'banana', 'durazno', 'uva', 'cereza', 'arandano', 'frutilla', 'kiwi'
+  ];*/
+
   title = 'tup2026';
 }
