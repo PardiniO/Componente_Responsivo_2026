@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrl: './leyenda.component.scss'
 })
 export class LeyendaComponent {
-  leyenda: string = 'lorem ipsum balbalbalballbalbllalblbalbalb'
 }

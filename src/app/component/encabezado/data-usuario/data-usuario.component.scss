@@ -1,4 +1,20 @@
-p {
-    color: antiquewhite;
-    
+.perfil-usuario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: centers;
+    padding: 0;
+
+    svg {
+        color: rgb(255, 136, 0);
+        width: 2rem;
+        height: 2rem;
+    }
+
+    p {
+        color: antiquewhite;
+        font-size: large;
+        margin: 0;
+        font-size: 1rem;
+    }
 }

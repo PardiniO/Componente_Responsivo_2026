@@ -7,4 +7,10 @@ import { Component, Input } from '@angular/core';
 })
 export class DataUsuarioComponent {
   @Input() nombre_usuario = '';
+
+  mostrar_nombre: boolean = false;
+
+  mostrarNombre() {
+    this.mostrar_nombre = !this.mostrar_nombre;
+  }
 }
