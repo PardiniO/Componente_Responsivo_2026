@@ -1,0 +1,10 @@
+<div class="contenedor">
+    <h2>Sesión:</h2>
+    <button (click)="mostrarModal()">Cerrar sesión</button>
+    <app-modal-component
+        *ngIf="mostrar_modal"
+        (accionAvisada)="accionRecibida($event)"
+        
+        ><p>¿Cerrar sesión?</p>
+    </app-modal-component>
+</div>

@@ -1,0 +1,22 @@
+.contenedor {
+    display: flex;
+    flex-direction: column;
+
+    .seccion-cerrar, .btns {
+        border-radius: 8px;
+        
+        .btn-cerrar, .btn-cancelar {
+            border: 1px solid #e03131;
+            color: #ffc9c9;
+        }
+
+        .btn-confirmar {
+            border: 1px solid #2f9e44;
+            color: #b2f2bb;
+
+            &:focus-visible {
+                outline: 3px dashed darkgreen;
+            }
+        }
+    }
+}

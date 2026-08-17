@@ -1,0 +1,21 @@
+<div class="contenedor">
+    <div class="seccion-cerrar">
+        <button 
+            class="btn-cerrar"
+            (click)="avisarAccion('cerrar')"
+        >X</button>
+    </div>
+    <div class="contenido">
+        <ng-content></ng-content>
+    </div>
+    <div class="btns">
+        <button 
+            class="btn-confirmar"
+            (click)="avisarAccion('confirmar')"
+        >Confirmar</button>
+        <button 
+            class="btn-cancelar"
+            (click)="avisarAccion('cancelar')"
+        >Cancelar</button>
+    </div>
+</div>

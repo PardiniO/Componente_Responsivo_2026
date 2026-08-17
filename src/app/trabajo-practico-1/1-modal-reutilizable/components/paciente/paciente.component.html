@@ -1,0 +1,20 @@
+<div class="contenedor">
+    <h2>Pacientes:</h2>
+    @for (paciente of pacientes; track paciente) {
+        <div class="datos">
+            <p>{{ paciente.nombre }}</p>
+            <p>{{ paciente.dni }}</p>
+            <button
+                class="btn-eliminar"
+                (click)="mostrarModal(paciente)"
+            >Eliminar</button>
+        </div>
+    }
+    <app-modal-component
+        *ngIf="mostrar_modal"
+        (accionAvisada)="accionRecibida($event)"
+        >
+        <p>¿Eliminar a {{ pacienteSeleccionado?.nombre }}, con DNI: {{ pacienteSeleccionado?.dni }}?</p>
+        <p>Esta acción es irreversible</p>
+    </app-modal-component>
+</div>

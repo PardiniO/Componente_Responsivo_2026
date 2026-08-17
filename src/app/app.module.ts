@@ -3,18 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EjemploComponent  } from "./component/ejemplo/ejemplo.component";
-import { LogoComponent } from './component/encabezado/logo/logo.component';
-import { LeyendaComponent } from './component/encabezado/leyenda/leyenda.component';
-import { HeaderComponent } from './component/encabezado/header/header.component';
-import { DataUsuarioComponent } from './component/encabezado/data-usuario/data-usuario.component';
-import { Encabezado2Component } from './component/output-ejemplo/encabezado2/encabezado2.component';
-import { Leyenda2Component } from './component/output-ejemplo/leyenda2/leyenda2.component';
-import { Hijo2Component } from './component/output-ejemplo/hijo2/hijo2.component';
-import { ComponentePadreComponent } from './component/comunicacion2/componente-padre/componente-padre.component';
-import { ComponenteHijoComponent } from './component/comunicacion2/componente-hijo/componente-hijo.component';
-import { PadreDirectoComponent } from './component/comunicacion-directa/padre-directo/padre-directo.component';
-import { HijoDirectoComponent } from './component/comunicacion-directa/hijo-directo/hijo-directo.component';
+import { EjemploComponent  } from "./ejercicios-clase/component/ejemplo/ejemplo.component";
+import { LogoComponent } from './ejercicios-clase/component/encabezado/logo/logo.component';
+import { LeyendaComponent } from './ejercicios-clase/component/encabezado/leyenda/leyenda.component';
+import { HeaderComponent } from './ejercicios-clase/component/encabezado/header/header.component';
+import { DataUsuarioComponent } from './ejercicios-clase/component/encabezado/data-usuario/data-usuario.component';
+import { Encabezado2Component } from './ejercicios-clase/component/output-ejemplo/encabezado2/encabezado2.component';
+import { Leyenda2Component } from './ejercicios-clase/component/output-ejemplo/leyenda2/leyenda2.component';
+import { Hijo2Component } from './ejercicios-clase/component/output-ejemplo/hijo2/hijo2.component';
+import { ComponentePadreComponent } from './ejercicios-clase/component/comunicacion2/componente-padre/componente-padre.component';
+import { ComponenteHijoComponent } from './ejercicios-clase/component/comunicacion2/componente-hijo/componente-hijo.component';
+import { PadreDirectoComponent } from './ejercicios-clase/component/comunicacion-directa/padre-directo/padre-directo.component';
+import { HijoDirectoComponent } from './ejercicios-clase/component/comunicacion-directa/hijo-directo/hijo-directo.component';
+import { ModalComponentComponent } from './trabajo-practico-1/1-modal-reutilizable/components/modal-component/modal-component.component';
+import { TurnoComponent } from './trabajo-practico-1/1-modal-reutilizable/components/turno/turno.component';
+import { PacienteComponent } from './trabajo-practico-1/1-modal-reutilizable/components/paciente/paciente.component';
+import { SesionComponent } from './trabajo-practico-1/1-modal-reutilizable/components/sesion/sesion.component';
 
 
 @NgModule({
@@ -31,7 +35,11 @@ import { HijoDirectoComponent } from './component/comunicacion-directa/hijo-dire
     ComponentePadreComponent,
     ComponenteHijoComponent,
     PadreDirectoComponent,
-    HijoDirectoComponent
+    HijoDirectoComponent,
+    ModalComponentComponent,
+    TurnoComponent,
+    PacienteComponent,
+    SesionComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,18 @@
+<div class="contenedor">
+    <h2>Turnos:</h2>
+    @for (turno of turnos; track turno) {
+        <div class="datos">
+            <p>{{ turno.nombre }}</p>
+            <button
+                (click)="mostrarModal(turno)"
+            >Cancelar</button>
+        </div>
+    }
+    <app-modal-component
+        *ngIf="mostrar_modal"
+        (accionAvisada)="accionRecibida($event)"
+        
+        ><p>¿Cancelar {{ turnoSeleccionado?.nombre }}?</p>
+        <p>Esta acción es irreversible</p>
+    </app-modal-component>
+</div>

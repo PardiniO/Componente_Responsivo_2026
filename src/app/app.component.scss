@@ -1,16 +1,11 @@
 main {
     width: 100%;
     min-height: 100vh;
+    
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
-
-/*.app-title {
-    font-size: 2.5rem;
-    color: var(--gray-900);
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-app-ejemplo {
-    width: 100%;
-    max-width: 1200px;
-}*/
