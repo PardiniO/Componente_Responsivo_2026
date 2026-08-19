@@ -1,0 +1,22 @@
+.turno-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    padding: 0.5rem;
+
+    .btns {
+        justify-content: space-between;
+
+        button {
+            border: none;
+        }
+
+        .confirmar {
+            background-color: green;
+        }
+        .cancelar {
+            background-color: red;
+        }
+    }
+
+}

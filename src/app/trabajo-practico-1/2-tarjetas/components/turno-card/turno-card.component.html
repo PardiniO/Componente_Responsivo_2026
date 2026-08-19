@@ -1,0 +1,19 @@
+<article class="turno-card">
+    <div class="info">
+        <h3>Hora: {{ turno.hora }}</h3>
+        <h3>Paciente: {{ turno.paciente }}</h3>
+        <h3>Estado: {{ turno.estado }}</h3>
+    </div>
+    <div 
+        class="btns"
+        *ngIf="turno.estado !== 'cancelado'"
+        ><button 
+            class="confirmar" 
+            (click)="confirmar()"
+        >Confirmar</button>
+        <button 
+            class="cancelar" 
+            (click)="cancelar()"
+        >Cancelar</button>
+    </div>
+</article>

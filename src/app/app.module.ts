@@ -19,6 +19,8 @@ import { ModalComponentComponent } from './trabajo-practico-1/1-modal-reutilizab
 import { TurnoComponent } from './trabajo-practico-1/1-modal-reutilizable/components/turno/turno.component';
 import { PacienteComponent } from './trabajo-practico-1/1-modal-reutilizable/components/paciente/paciente.component';
 import { SesionComponent } from './trabajo-practico-1/1-modal-reutilizable/components/sesion/sesion.component';
+import { AgendaDiaComponent } from './trabajo-practico-1/2-tarjetas/components/agenda-dia/agenda-dia.component';
+import { TurnoCardComponent } from './trabajo-practico-1/2-tarjetas/components/turno-card/turno-card.component';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { SesionComponent } from './trabajo-practico-1/1-modal-reutilizable/compo
     ModalComponentComponent,
     TurnoComponent,
     PacienteComponent,
-    SesionComponent
+    SesionComponent,
+    AgendaDiaComponent,
+    TurnoCardComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,9 @@
+<div class="contenedor">
+    <h2>Turnos:</h2>
+    @for (turno of turnos; track turno.turnoNro) {
+        <app-turno-card 
+            [turno]="turno"
+            (estadoTurno)="actualizarEstado(turno.turnoNro, $event)"
+        ></app-turno-card>
+    }
+</div>

@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component } from "@angular/core";
 
 export type BookActionType = 'favorite' | 'read' | 'read-later' | 'save';
 
