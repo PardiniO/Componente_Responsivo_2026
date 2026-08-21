@@ -1,9 +1,37 @@
+<div class="main-layout">
+    <header class="navbar">
+        <h1>Práctico Integrador Angular</h1>
+        <nav class="menu">
+            <button [class.activo]="ejercicioActivo === 1" (click)="seleccionarEjercicio(1)">
+            Ejercicio 1: Modal
+            </button>
+            <button [class.activo]="ejercicioActivo === 2" (click)="seleccionarEjercicio(2)">
+            Ejercicio 2: Tarjetas
+            </button>
+            <button [class.activo]="ejercicioActivo === 3" (click)="seleccionarEjercicio(3)">
+            Ejercicio 3: Wizard
+            </button>
+            <button [class.activo]="ejercicioActivo === 4" (click)="seleccionarEjercicio(4)">
+            Ejercicio 4: Panel
+            </button>
+        </nav>
+    </header>
+
+    <main class="content-container">
+        <!-- Renderizado dinámico del ejercicio seleccionado -->
+        <app-ejercicio-modal *ngIf="ejercicioActivo === 1"></app-ejercicio-modal>
+        <app-agenda-dia *ngIf="ejercicioActivo === 2"></app-agenda-dia>
+        <app-alta-turno *ngIf="ejercicioActivo === 3"></app-alta-turno>
+        <app-ficha-paciente *ngIf="ejercicioActivo === 4"></app-ficha-paciente>
+      </main>
+    </div>
+
+
+<!--
 <main >
     <div>
         <app-ficha-paciente></app-ficha-paciente>
-    </div>
-<!--
-    <div>
+    </div>   <div>
         <app-alta-turnos></app-alta-turnos>
     </div>
     <div class="contenedor">
@@ -14,7 +42,6 @@
     <div>
         <app-agenda-dia></app-agenda-dia>
     </div>
--->
     <router-outlet />
 </main>
-
+-->
