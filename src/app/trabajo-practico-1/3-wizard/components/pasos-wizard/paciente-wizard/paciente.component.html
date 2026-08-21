@@ -1,0 +1,10 @@
+<div>
+    <label for="paciente">Seleccione un paciente:</label>
+    <select name="paciente" id="paciente" (change)="seleccionarPaciente($event)">
+        <option value="">-- Seleccion --</option>
+        <option value="1" 
+            *ngFor="let paciente of pacientes; let i = index" 
+            [value]="paciente.id"
+        >{{ paciente.nombre }}</option>
+    </select>
+</div>

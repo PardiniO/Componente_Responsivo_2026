@@ -1,0 +1,35 @@
+<app-wizard
+    [pasoActual]="pasoActual"
+    [totalPasos]="totalPasos"
+    [tituloPaso]="obtenerTitulo()"
+    [pasoActivoInstancia]="obtenerPasoActual()"
+    (avanzar)="siguiente()"
+    (retroceder)="anterior()"
+    (confirmar)="guardarTurnoCompleto()"
+>
+    <div [ngSwitch]="pasoActual">
+        <app-paciente-wizard
+            *ngSwitchCase="1"
+            #refPaciente
+            (pacienteSeleccionado)="guardarPaciente($event)"
+        ></app-paciente-wizard>
+        
+        <app-horario
+            *ngSwitchCase="2"
+            #refFecha
+            (seleccion)="guardarFechaHora($event)"
+        ></app-horario>
+
+        <app-especialidad-profecional
+            *ngSwitchCase="2"
+            #refEspecialidadProfecional
+            (seleccion)="guardarEspecialidadProfecional($event)"
+        ></app-especialidad-profecional>
+        
+        <app-confirmacion
+            *ngSwitchCase="3"
+            #refConfirmacion
+            [datosTurno]="datosTurno"
+        ></app-confirmacion>
+    </div>
+</app-wizard>

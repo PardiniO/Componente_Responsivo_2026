@@ -1,0 +1,45 @@
+<div class="contenedor">
+    <h2>Ficha del paciente</h2>
+
+    <app-panel-colapsable
+        [titulo]="'Datos personales'"
+        [expandido]="estadoPaneles.datosPersonales"
+        (estadoCambiado)="actualizarEstado('datosPersonales', $event)"
+    >
+        <ul>
+            <li><strong>Nombre:</strong> María Gómez</li>
+            <li><strong>DNI:</strong> 22.222.222</li>
+            <li><strong>Teléfono:</strong> 555-1234</li>
+        </ul>
+    </app-panel-colapsable>
+
+    <app-panel-colapsable
+        [titulo]="'Historial de turnos'"
+        [expandido]="estadoPaneles.historialTurnos"
+        (estadoCambiado)="actualizarEstado('historialTurnos', $event)"
+    >
+        <table border="1" width="100%" style="border-collapse: collapse;">
+            <tr>
+                <th>Fecha</th>
+                <th>Especialidad</th>
+                <th>Estado</th>
+            </tr>
+            <tr>
+                <td>10/08/2026</td>
+                <td>Cardiología</td>
+                <td>Atendido</td>
+            </tr>
+        </table>
+    </app-panel-colapsable>
+
+    <app-panel-colapsable
+        [titulo]="'Notas del profesional'"
+        [expandido]="estadoPaneles.notasProfesional"
+        (estadoCambiado)="actualizarEstado('notasProfesional', $event)"
+    >
+        <p>
+            La paciente presenta buena evolución. Se le recetaron los estudios
+            de laboratorio correspondientes. Próximo control en 6 meses.
+        </p>
+    </app-panel-colapsable>
+</div>

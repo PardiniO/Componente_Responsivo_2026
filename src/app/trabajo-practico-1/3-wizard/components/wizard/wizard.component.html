@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="header">
+        <h2>Paso {{ pasoActual }} de {{ totalPasos }}</h2>
+        <h3>{{ tituloPaso }}</h3>
+        <hr>
+    </div>
+    
+    <div class="body">
+        <ng-content></ng-content>
+    </div>
+    
+    <div class="footer">
+        <button
+            *ngIf="pasoActual > 1"
+            (click)="anterior()"
+        >Atrás</button>
+
+        <button
+            *ngIf="pasoActual < totalPasos"
+            (click)="siguiente()"
+        >Siguiente</button>
+        
+        <button
+            *ngIf="pasoActual === totalPasos"
+            (click)="finalizar()"
+        >Confirmar</button>
+    </div>
+
+    <p *ngIf="mostrarError">
+        Error: Complete correctamente los datos antes de avanzar.
+    </p>
+</div>

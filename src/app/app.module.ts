@@ -22,6 +22,15 @@ import { SesionComponent } from './trabajo-practico-1/1-modal-reutilizable/compo
 import { AgendaDiaComponent } from './trabajo-practico-1/2-tarjetas/components/agenda-dia/agenda-dia.component';
 import { TurnoCardComponent } from './trabajo-practico-1/2-tarjetas/components/turno-card/turno-card.component';
 
+import { WizardComponent } from './trabajo-practico-1/3-wizard/components/wizard/wizard.component';
+import { AltaTurnosComponent } from "./trabajo-practico-1/3-wizard/components/pasos-wizard/alta-turnos/alta-turnos.component";
+import { PacienteWizardComponent } from "./trabajo-practico-1/3-wizard/components/pasos-wizard/paciente-wizard/paciente.component";
+import { HorarioComponent } from './trabajo-practico-1/3-wizard/components/pasos-wizard/horario/horario.component';
+import { EspecialidadProfecionalComponent } from './trabajo-practico-1/3-wizard/components/pasos-wizard/especialidad-profecional/especialidad-profecional.component';
+import { ConfirmacionComponent } from './trabajo-practico-1/3-wizard/components/pasos-wizard/confirmacion/confirmacion.component';
+import { PanelColapsableComponent } from './trabajo-practico-1/4-panel/components/panel-colapsable/panel-colapsable.component';
+import { FichaPacienteComponent } from './trabajo-practico-1/4-panel/components/ficha-paciente/ficha-paciente.component';
+
 
 @NgModule({
   declarations: [
@@ -43,7 +52,15 @@ import { TurnoCardComponent } from './trabajo-practico-1/2-tarjetas/components/t
     PacienteComponent,
     SesionComponent,
     AgendaDiaComponent,
-    TurnoCardComponent
+    TurnoCardComponent,
+    WizardComponent,
+    EspecialidadProfecionalComponent,
+    HorarioComponent,
+    ConfirmacionComponent,
+    AltaTurnosComponent,
+    PacienteWizardComponent,
+    PanelColapsableComponent,
+    FichaPacienteComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,11 @@
+<div class="contenedor">
+    <div 
+        class="titulo-contenedor"
+        (click)="alternarPanel()">
+        <h2 class="titulo">{{ titulo }}</h2>
+        <span class="icono">{{ expandido ? '▼' : '▶' }}</span>
+    </div>
+    <div *ngIf="expandido" class="contenido-expandible">
+        <ng-content></ng-content>
+    </div>
+</div>
