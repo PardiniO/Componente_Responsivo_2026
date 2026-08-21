@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+type Ejercicio = 1 | 2 | 3 | 4;
+type EjercicioSeleccionado = Ejercicio | null;
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,8 +11,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   title = 'Trabajo Práctico';
-  ejercicioActivo: Ejercicio = 1;
+  ejercicioActivo: EjercicioSeleccionado = null;
 
   seleccionarEjercicio(ejercicio: Ejercicio): void {
     this.ejercicioActivo = ejercicio;
+  }
 }

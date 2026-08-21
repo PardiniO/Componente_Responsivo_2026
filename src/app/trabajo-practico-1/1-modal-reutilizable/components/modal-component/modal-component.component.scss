@@ -6,13 +6,13 @@
         border-radius: 8px;
         
         .btn-cerrar, .btn-cancelar {
-            border: 1px solid #e03131;
-            color: #ffc9c9;
+            border: 1px solid #ffc9c9;
+            color: #e03131;
         }
 
         .btn-confirmar {
-            border: 1px solid #2f9e44;
-            color: #b2f2bb;
+            border: 1px solid #b2f2bb;
+            color: #2f9e44;
 
             &:focus-visible {
                 outline: 3px dashed darkgreen;

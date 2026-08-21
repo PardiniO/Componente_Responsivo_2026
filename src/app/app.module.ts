@@ -30,6 +30,8 @@ import { EspecialidadProfecionalComponent } from './trabajo-practico-1/3-wizard/
 import { ConfirmacionComponent } from './trabajo-practico-1/3-wizard/components/pasos-wizard/confirmacion/confirmacion.component';
 import { PanelColapsableComponent } from './trabajo-practico-1/4-panel/components/panel-colapsable/panel-colapsable.component';
 import { FichaPacienteComponent } from './trabajo-practico-1/4-panel/components/ficha-paciente/ficha-paciente.component';
+import { ListaTurnosComponent } from './ejercicios-clase/clase-inter-serv/components/lista-turnos/lista-turnos.component';
+import { CargaTurnoComponent } from './ejercicios-clase/clase-inter-serv/components/carga-turno/carga-turno.component';
 
 
 @NgModule({
@@ -60,7 +62,9 @@ import { FichaPacienteComponent } from './trabajo-practico-1/4-panel/components/
     AltaTurnosComponent,
     PacienteWizardComponent,
     PanelColapsableComponent,
-    FichaPacienteComponent
+    FichaPacienteComponent,
+    ListaTurnosComponent,
+    CargaTurnoComponent
   ],
   imports: [
     BrowserModule,

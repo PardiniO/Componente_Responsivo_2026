@@ -1,47 +1,38 @@
-<div class="main-layout">
+<div>
+    <app-lista-turnos></app-lista-turnos>
+</div>
+<!--
+<div class="contenedor">
     <header class="navbar">
         <h1>Ejercicios del Práctico</h1>
         <nav class="menu">
+            <button >
+                Inicio
+            </button>
             <button [class.activo]="ejercicioActivo === 1" (click)="seleccionarEjercicio(1)">
-            Ejercicio 1: Modal
+                Ejercicio 1: Modal
             </button>
             <button [class.activo]="ejercicioActivo === 2" (click)="seleccionarEjercicio(2)">
-            Ejercicio 2: Tarjetas
+                Ejercicio 2: Tarjetas
             </button>
             <button [class.activo]="ejercicioActivo === 3" (click)="seleccionarEjercicio(3)">
-            Ejercicio 3: Wizard
+                Ejercicio 3: Wizard
             </button>
             <button [class.activo]="ejercicioActivo === 4" (click)="seleccionarEjercicio(4)">
-            Ejercicio 4: Panel
+                Ejercicio 4: Panel
             </button>
         </nav>
     </header>
 
-    <main class="content-container">
-        <!-- Renderizado dinámico del ejercicio seleccionado -->
-        <app-ejercicio-modal *ngIf="ejercicioActivo === 1"></app-ejercicio-modal>
+    <main class="contenido-container">
+        <ng-container *ngIf="ejercicioActivo === 1">
+            <app-turno></app-turno>
+            <app-paciente></app-paciente>
+            <app-sesion></app-sesion>
+        </ng-container>
         <app-agenda-dia *ngIf="ejercicioActivo === 2"></app-agenda-dia>
-        <app-alta-turno *ngIf="ejercicioActivo === 3"></app-alta-turno>
+        <app-alta-turnos *ngIf="ejercicioActivo === 3"></app-alta-turnos>
         <app-ficha-paciente *ngIf="ejercicioActivo === 4"></app-ficha-paciente>
-      </main>
-    </div>
-
-
-<!--
-<main >
-    <div>
-        <app-ficha-paciente></app-ficha-paciente>
-    </div>   <div>
-        <app-alta-turnos></app-alta-turnos>
-    </div>
-    <div class="contenedor">
-        <app-turno></app-turno>
-        <app-paciente></app-paciente>
-        <app-sesion></app-sesion>
-    </div>
-    <div>
-        <app-agenda-dia></app-agenda-dia>
-    </div>
-    <router-outlet />
-</main>
+    </main>
+</div>
 -->

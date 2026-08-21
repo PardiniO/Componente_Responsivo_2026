@@ -1,0 +1,21 @@
+<div class="container">
+    <label for="paciente">Paciente:</label>
+    <input type="text" id="paciente" [(ngModel)]="turno.paciente">
+
+    <label for="fecha">Fecha:</label>
+    <input type="date" id="fecha" [(ngModel)]="turno.fecha">
+
+    <label for="hora">Hora:</label>
+    <input type="time" id="hora" [(ngModel)]="turno.hora">
+
+    <label for="estado">Estado:</label>
+    <select id="estado" [(ngModel)]="turno.estado">
+        <option value="pendiente">Pendiente</option>
+        <option value="confirmado">Confirmado</option>
+        <option value="cancelado">Cancelado</option>
+    </select>
+
+    <button type="button" (click)="guardarTurno()">Guardar Turno</button>
+    <button type="button" (click)="cancelar()">Cancelar</button>
+    <button type="button" (click)="crearTurno()">Crear Turno</button>
+</div>

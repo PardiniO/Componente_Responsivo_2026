@@ -2,11 +2,12 @@
     <h2>Ficha del paciente</h2>
 
     <app-panel-colapsable
+        class="panel"
         [titulo]="'Datos personales'"
         [expandido]="estadoPaneles.datosPersonales"
         (estadoCambiado)="actualizarEstado('datosPersonales', $event)"
     >
-        <ul>
+        <ul class="lista-contenedor">
             <li><strong>Nombre:</strong> María Gómez</li>
             <li><strong>DNI:</strong> 22.222.222</li>
             <li><strong>Teléfono:</strong> 555-1234</li>
@@ -18,7 +19,7 @@
         [expandido]="estadoPaneles.historialTurnos"
         (estadoCambiado)="actualizarEstado('historialTurnos', $event)"
     >
-        <table border="1" width="100%" style="border-collapse: collapse;">
+        <table class="tabla">
             <tr>
                 <th>Fecha</th>
                 <th>Especialidad</th>

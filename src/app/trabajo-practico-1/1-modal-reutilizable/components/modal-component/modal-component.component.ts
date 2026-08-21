@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 export type AccionModal = 'confirmar' | 'cancelar' | 'cerrar';
 

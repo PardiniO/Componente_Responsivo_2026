@@ -1,0 +1,30 @@
+<div class="container">
+    @for (turno of turnos; track turno.id) {
+        <p>
+            {{ turno.id }}
+            {{ turno.paciente }}
+            {{ turno.fecha }}
+            {{ turno.hora }}
+            {{ turno.estado }}
+
+            @if (turno.estado === 'pendiente') {
+                <button type="button" (click)="confirmar(turno.id)">Confirmar</button>
+            }
+
+            @if (turno.estado === 'confirmado') {
+                <button type="button" (click)="cancelar(turno.id)">Cancelar</button>
+            }
+        </p>
+    } 
+    <button type="button" (click)="cargarTurno()" routerLink="/carga-turno">Cargar Turno</button>
+    <app-carga-turno
+        *ngIf="cargarTurno"
+        (cancelarTurno)="cargarTurno()"
+    ></app-carga-turno>
+
+    <div *ngFor="let t of turnos">
+        <p>
+            {{ t.id }} - {{ t.paciente }} - {{ t.fecha }} - {{ t.hora }} - {{ t.estado }}
+        </p>
+    </div>
+</div>
